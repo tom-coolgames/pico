@@ -32,6 +32,11 @@ $enable-transitions: true !default;
 // Enable overriding with !important
 $enable-important: true !default;
 
+// Optional parent selector
+// If defined, all HTML tags are wrapped with this selector
+// :root is not wrapped
+$parent-selector: "" !default;
+
 // Responsive
 // ––––––––––––––––––––
 
