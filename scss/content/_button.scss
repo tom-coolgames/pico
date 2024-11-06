@@ -10,7 +10,7 @@
 // 1. Change the font styles in all browsers
 // 2. Remove the margin on controls in Safari
 // 3. Show the overflow in Edge
-button {
+#{$parent-selector} button {
   margin: 0; // 2
   overflow: visible; // 3
   font-family: inherit; // 1
@@ -18,32 +18,32 @@ button {
 }
 
 // Correct the inability to style buttons in iOS and Safari
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+#{$parent-selector} button,
+#{$parent-selector} [type="button"],
+#{$parent-selector} [type="reset"],
+#{$parent-selector} [type="submit"] {
   -webkit-appearance: button;
 }
 
 // Pico
 // ––––––––––––––––––––
 
-button {
+#{$parent-selector} button {
   display: block;
   width: 100%;
   margin-bottom: var(--spacing);
 }
 
-[role="button"] {
+#{$parent-selector} [role="button"] {
   display: inline-block;
   text-decoration: none;
 }
 
-button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-[role="button"] {
+#{$parent-selector} button,
+#{$parent-selector} input[type="submit"],
+#{$parent-selector} input[type="button"],
+#{$parent-selector} input[type="reset"],
+#{$parent-selector} [role="button"] {
   --background-color: var(--primary);
   --border-color: var(--primary);
   --color: var(--primary-inverse);

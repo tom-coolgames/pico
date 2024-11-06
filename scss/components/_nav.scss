@@ -6,7 +6,7 @@
 // - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
 
 // Prevent VoiceOver from ignoring list semantics in Safari (opinionated)
-:where(nav li)::before {
+#{$parent-selector} :where(nav li)::before {
   float: left;
   content: "\200B";
 }
@@ -15,12 +15,12 @@
 // ––––––––––––––––––––
 
 // Horizontal Nav
-nav,
-nav ul {
+#{$parent-selector} nav,
+#{$parent-selector} nav ul {
   display: flex;
 }
 
-nav {
+#{$parent-selector} nav {
   justify-content: space-between;
 
   ol,
@@ -73,7 +73,7 @@ nav {
 }
 
 // Vertical Nav
-aside {
+#{$parent-selector} aside {
   nav,
   ol,
   ul,

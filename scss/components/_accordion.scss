@@ -2,7 +2,7 @@
  * Accordion (<details>)
  */
 
-details {
+ #{$parent-selector} details {
   display: block;
   margin-bottom: var(--spacing);
   padding-bottom: var(--spacing);
@@ -103,7 +103,7 @@ details {
 }
 
 [dir="rtl"] {
-  details {
+  #{$parent-selector} details {
     summary {
       text-align: right;
 

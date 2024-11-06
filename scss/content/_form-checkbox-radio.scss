@@ -3,8 +3,8 @@
  * Checkboxes & Radios
  */
 
-[type="checkbox"],
-[type="radio"] {
+ #{$parent-selector} [type="checkbox"],
+ #{$parent-selector} [type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -44,7 +44,7 @@
 }
 
 // Checkboxes
-[type="checkbox"] {
+#{$parent-selector} [type="checkbox"] {
   &:indeterminate {
     --background-color: var(--primary);
     --border-color: var(--primary);
@@ -69,7 +69,7 @@
 }
 
 // Switchs
-[type="checkbox"][role="switch"] {
+#{$parent-selector} [type="checkbox"][role="switch"] {
   --background-color: var(--switch-background-color);
   --border-color: var(--switch-background-color);
   --color: var(--switch-color);
@@ -121,12 +121,12 @@
 }
 
 // Aria-invalid
-[type="checkbox"],
-[type="checkbox"]:checked,
-[type="radio"],
-[type="radio"]:checked,
-[type="checkbox"][role="switch"],
-[type="checkbox"][role="switch"]:checked {
+#{$parent-selector} [type="checkbox"],
+#{$parent-selector} [type="checkbox"]:checked,
+#{$parent-selector} [type="radio"],
+#{$parent-selector} [type="radio"]:checked,
+#{$parent-selector} [type="checkbox"][role="switch"],
+#{$parent-selector} [type="checkbox"][role="switch"]:checked {
   
   &[aria-invalid="false"] {
     --border-color: var(--form-element-valid-border-color);

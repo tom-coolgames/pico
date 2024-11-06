@@ -8,39 +8,39 @@
 // ––––––––––––––––––––
 
 // Add the correct font weight in Chrome, Edge, and Safari
-b,
-strong {
+#{$parent-selector} b,
+#{$parent-selector} strong {
   font-weight: bolder;
 }
 
 // Prevent `sub` and `sup` elements from affecting the line height in all browsers
-sub,
-sup {
+#{$parent-selector} sub,
+#{$parent-selector} sup {
   position: relative;
   font-size: 0.75em;
   line-height: 0;
   vertical-align: baseline;
 }
-sub {
+#{$parent-selector} sub {
   bottom: -0.25em;
 }
-sup {
+#{$parent-selector} sup {
   top: -0.5em;
 }
 
 // Pico
 // ––––––––––––––––––––
 
-address,
-blockquote,
-dl,
-figure,
-form,
-ol,
-p,
-pre,
-table,
-ul {
+#{$parent-selector} address,
+#{$parent-selector} blockquote,
+#{$parent-selector} dl,
+#{$parent-selector} figure,
+#{$parent-selector} form,
+#{$parent-selector} ol,
+#{$parent-selector} p,
+#{$parent-selector} pre,
+#{$parent-selector} table,
+#{$parent-selector} ul {
   margin-top: 0;
   margin-bottom: var(--typography-spacing-vertical);
   color: var(--color);
@@ -51,8 +51,8 @@ ul {
 
 // Links
 // 1. Remove the gray background on active links in IE 10
-a,
-[role="link"] {
+#{$parent-selector} a,
+#{$parent-selector} [role="link"] {
   --color: var(--primary);
   --background-color: transparent;
   outline: none;
@@ -104,12 +104,12 @@ a,
 }
 
 // Headings
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#{$parent-selector} h1,
+#{$parent-selector} h2,
+#{$parent-selector} h3,
+#{$parent-selector} h4,
+#{$parent-selector} h5,
+#{$parent-selector} h6 {
   margin-top: 0;
   margin-bottom: var(--typography-spacing-vertical);
   color: var(--color);
@@ -118,27 +118,27 @@ h6 {
   font-family: var(--font-family);
 }
 
-h1 {
+#{$parent-selector} h1 {
   --color: var(--h1-color);
 }
-h2 {
+#{$parent-selector} h2 {
   --color: var(--h2-color);
 }
-h3 {
+#{$parent-selector} h3 {
   --color: var(--h3-color);
 }
-h4 {
+#{$parent-selector} h4 {
   --color: var(--h4-color);
 }
-h5 {
+#{$parent-selector} h5 {
   --color: var(--h5-color);
 }
-h6 {
+#{$parent-selector} h6 {
   --color: var(--h6-color);
 }
 
 // Margin-top for headings after a typography block
-:where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
+#{$parent-selector} :where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
   ~ :is(h1, h2, h3, h4, h5, h6) {
     margin-top: var(--typography-spacing-vertical);
   }
@@ -146,7 +146,7 @@ h6 {
 
 // Heading group
 @if $enable-classes == false {
-  hgroup {
+  #{$parent-selector} hgroup {
     margin-bottom: var(--typography-spacing-vertical);
 
     > * {
@@ -163,8 +163,8 @@ h6 {
 }
 
 @if $enable-classes {
-  hgroup,
-  .headings {
+  #{$parent-selector} hgroup,
+  #{$parent-selector} .headings {
     margin-bottom: var(--typography-spacing-vertical);
 
     > * {
@@ -181,17 +181,17 @@ h6 {
 }
 
 // Paragraphs
-p {
+#{$parent-selector} p {
   margin-bottom: var(--typography-spacing-vertical);
 }
 
 // Small
-small {
+#{$parent-selector} small {
   font-size: var(--font-size);
 }
 
 // Lists
-:where(dl, ol, ul) {
+#{$parent-selector} :where(dl, ol, ul) {
   padding-right: 0;
   padding-left: var(--spacing);
   padding-inline-start: var(--spacing);
@@ -204,19 +204,19 @@ small {
 
 // Margin-top for nested lists
 // 1. Remove the margin on nested lists in Chrome, Edge, IE, and Safari
-:where(dl, ol, ul) {
+#{$parent-selector} :where(dl, ol, ul) {
   :is(dl, ol, ul) {
     margin: 0; // 1
     margin-top: calc(var(--typography-spacing-vertical) * 0.25);
   }
 }
 
-ul li {
+#{$parent-selector} ul li {
   list-style: square;
 }
 
 // Highlighted text
-mark {
+#{$parent-selector} mark {
   padding: 0.125rem 0.25rem;
   background-color: var(--mark-background-color);
   color: var(--mark-color);
@@ -224,7 +224,7 @@ mark {
 }
 
 // Blockquote
-blockquote {
+#{$parent-selector} blockquote {
   display: block;
   margin: var(--typography-spacing-vertical) 0;
   padding: var(--spacing);
@@ -241,24 +241,24 @@ blockquote {
 
 // Abbreviations
 // 1. Remove underline decoration in Chrome, Edge, IE, Opera, and Safari
-abbr[title] {
+#{$parent-selector} abbr[title] {
   border-bottom: 1px dotted;
   text-decoration: none; // 1
   cursor: help;
 }
 
 // Ins
-ins {
+#{$parent-selector} ins {
   color: var(--ins-color);
   text-decoration: none;
 }
 
 // del
-del {
+#{$parent-selector} del {
   color: var(--del-color);
 }
 
 // selection
-::selection {
+#{$parent-selector} ::selection {
   background-color: var(--primary-focus);
 }

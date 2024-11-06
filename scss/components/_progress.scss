@@ -9,7 +9,7 @@
 
 // 1. Add the correct display in Edge 18- and IE
 // 2. Add the correct vertical alignment in Chrome, Edge, and Firefox
-progress {
+#{$parent-selector} progress {
   display: inline-block; // 1
   vertical-align: baseline; // 2
 }
@@ -17,7 +17,7 @@ progress {
 // Pico
 // ––––––––––––––––––––
 
-progress {
+#{$parent-selector} progress {
   // Reset the default appearance
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -71,7 +71,7 @@ progress {
   }
 }
 
-[dir="rtl"] {
+#{$parent-selector} [dir="rtl"] {
   @media (prefers-reduced-motion: no-preference) {
     progress:indeterminate {
       animation-direction: reverse;

@@ -4,7 +4,7 @@
  */
 
 // Color
-[type="color"] {
+#{$parent-selector} [type="color"] {
   // Wrapper
   @mixin color-wrapper {
     padding: 0;
@@ -35,7 +35,7 @@
 
 // Date & Time
 // :not() are needed to add Specificity and avoid !important on padding
-input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
+#{$parent-selector} input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
   &[type="date"],
   &[type="datetime-local"],
   &[type="month"],
@@ -57,11 +57,11 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="
 }
 
 // Calendar picker
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="time"],
-[type="week"] {
+#{$parent-selector} [type="date"],
+#{$parent-selector} [type="datetime-local"],
+#{$parent-selector} [type="month"],
+#{$parent-selector} [type="time"],
+#{$parent-selector} [type="week"] {
   &::-webkit-calendar-picker-indicator {
     width: var(--icon-width);
     margin-right: calc(var(--icon-width) * -1);
@@ -70,13 +70,13 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="
   }
 }
 
-[dir="rtl"]
+#{$parent-selector} [dir="rtl"]
   :is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
   text-align: right;
 }
 
 // File
-[type="file"] {
+#{$parent-selector} [type="file"] {
   --color: var(--muted-color);
   padding: calc(var(--form-element-spacing-vertical) * 0.5) 0;
   border: 0;
@@ -131,7 +131,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="
 }
 
 // Range
-[type="range"] {
+#{$parent-selector} [type="range"] {
   // Config
   $height-track: 0.25rem;
   $height-thumb: 1.25rem;
@@ -224,7 +224,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="
 
 // Search
 // :not() are needed to add Specificity and avoid !important on padding
-input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
+#{$parent-selector} input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
   &[type="search"] {
     padding-inline-start: calc(var(--form-element-spacing-horizontal) + 1.75rem);
     border-radius: 5rem;
@@ -254,14 +254,14 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="
 }
 
 // Cancel button
-[type="search"] {
+#{$parent-selector} [type="search"] {
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
     display: none;
   }
 }
 
-[dir="rtl"] {
+#{$parent-selector} [dir="rtl"] {
   :where(input) {
     &:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
       &[type="search"] {

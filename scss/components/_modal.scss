@@ -6,7 +6,7 @@
   --scrollbar-width: 0px;
 }
 
-dialog {
+#{$parent-selector} dialog {
   display: flex;
   z-index: 999;
   position: fixed;
@@ -109,7 +109,7 @@ dialog {
 
 // Utilities
 @if $enable-classes {
-  .modal-is-open {
+  #{$parent-selector} .modal-is-open {
     padding-right: var(--scrollbar-width, 0px);
     overflow: hidden;
     pointer-events: none;
@@ -124,7 +124,7 @@ dialog {
 @if ($enable-classes and $enable-transitions) {
   $animation-duration: 0.2s;
 
-  :where(.modal-is-opening, .modal-is-closing) {
+  #{$parent-selector} :where(.modal-is-opening, .modal-is-closing) {
     dialog,
     dialog > article {
       animation-duration: $animation-duration;
@@ -143,7 +143,7 @@ dialog {
     }
   }
 
-  .modal-is-closing {
+  #{$parent-selector} .modal-is-closing {
     dialog,
     dialog > article {
       animation-delay: 0s;
