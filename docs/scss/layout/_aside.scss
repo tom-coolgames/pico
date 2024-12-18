@@ -6,7 +6,7 @@ main > aside {
 
   nav {
     width: 100%;
-    padding-bottom: var(--block-spacing-vertical);
+    padding-bottom: var(--pico-block-spacing-vertical);
   
     @media (min-width: map-get($breakpoints, "lg")) {
       position: fixed;
@@ -19,13 +19,13 @@ main > aside {
     a#toggle-docs-navigation {
       display: block;
       margin: 0;
-      margin-bottom: var(--spacing);
+      margin-bottom: var(--pico-spacing);
       padding: 0;
-      padding-bottom: var(--spacing);
-      border-bottom: var(--border-width) solid var(--accordion-border-color);
+      padding-bottom: var(--pico-spacing);
+      border-bottom: var(--pico-border-width) solid var(--pico-accordion-border-color);
 
       svg {
-        margin-right: calc(var(--spacing) * 0.5);
+        margin-right: calc(var(--pico-spacing) * 0.5);
         vertical-align: -3px;
       }
 
@@ -86,8 +86,8 @@ main > aside {
   }
 
   li a {
-    --nav-link-spacing-vertical: 0.25rem;
-    --nav-link-spacing-horizontal: 0.75rem;
+    --pico-nav-link-spacing-vertical: 0.25rem;
+    --pico-nav-link-spacing-horizontal: 0.75rem;
 
     svg {
       vertical-align: middle;
@@ -96,19 +96,19 @@ main > aside {
 
   a.secondary:focus {
     background-color: transparent;
-    color: var(--primary-hover);
+    color: var(--pico-primary-hover);
   }
 
   a[aria-current],
   a[aria-current]:hover {
-    color: var(--primary);
+    color: var(--pico-primary);
   }
 
   details {
     border-bottom: none;
 
     summary {
-      color: var(--h1-color);
+      color: var(--pico-h1-color);
       font-weight: 300;
       font-size: 14px;
       text-transform: uppercase;
@@ -123,7 +123,7 @@ main > aside {
         margin-bottom: 0;
 
         &:not([role=button]):not(:focus) {
-          color: var(--h1-color);
+          color: var(--pico-h1-color);
         }
       }
     }

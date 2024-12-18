@@ -6,7 +6,7 @@
 #themes {
   button.theme-switcher {
     &:first-of-type {
-      --font-weight: bold;
+      --pico-font-weight: bold;
     }
     
     i {
@@ -27,8 +27,8 @@
     @media (min-width: map-get($breakpoints, "sm")) {
       grid-template-rows: 1fr;
       grid-template-columns: repeat(18, 1fr);
-      border-top-right-radius: var(--border-radius);
-      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--pico-border-radius);
+      border-top-left-radius: var(--pico-border-radius);
     }
 
     ~ article {
@@ -49,7 +49,7 @@
       }
 
       &.picked {
-        background-image: var(--icon-check);
+        background-image: var(--pico-icon-check);
         background-position: center;
         background-size: 0.66rem auto;
         background-repeat: no-repeat;
@@ -59,29 +59,29 @@
       &[data-color="yellow"],
       &[data-color="amber"] {
         &.picked {
-          background-image: var(--icon-check-dark);
+          background-image: var(--pico-icon-check-dark);
         }
       }
     }
   }
 
   h4 {
-    transition: color var(--transition);
+    transition: color var(--pico-transition);
   }
 
   pre[data-theme="generated"] {
-    border-color: var(--primary);
+    border-color: var(--pico-primary);
   }
 }
 
 // Docs: Grid
 #grid {
-  --grid-spacing-vertical: 1rem;
+  --pico-grid-spacing-vertical: 1rem;
 
   button {
     display: block;
     width: 100%;
-    margin-bottom: var(--spacing);
+    margin-bottom: var(--pico-spacing);
 
     @media (min-width: map-get($breakpoints, "sm")) {
       display: inline-block;
@@ -90,7 +90,7 @@
     }
 
     svg {
-      stroke: var(--secondary);
+      stroke: var(--pico-secondary);
       margin-right: 0.5rem;
       border: 2px solid currentColor;
       border-radius: 1rem;
@@ -100,16 +100,16 @@
 
   .grid {
     > * {
-      padding: calc(var(--spacing) / 2) 0;
-      border-radius: var(--border-radius);
-      background: var(--code-background-color);
+      padding: calc(var(--pico-spacing) / 2) 0;
+      border-radius: var(--pico-border-radius);
+      background: var(--pico-code-background-color);
       font-size: 87.5%;
       text-align: center;
     }
   }
 
   details {
-    margin-top: calc(var(--typography-spacing-vertical) * 2);
+    margin-top: calc(var(--pico-typography-spacing-vertical) * 2);
 
     svg {
       vertical-align: bottom;
@@ -120,7 +120,7 @@
 // Docs: Buttons
 #buttons {
   a[role="button"] {
-    margin-right: calc(var(--spacing) * 0.5);
+    margin-right: calc(var(--pico-spacing) * 0.5);
   }
 }
 
@@ -132,6 +132,6 @@
 // Docs: Modal
 #modal {
   button {
-    --font-weight: bold;
+    --pico-font-weight: bold;
   }
 }

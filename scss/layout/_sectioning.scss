@@ -30,7 +30,7 @@ body {
 
     // Semantic container
     @if $enable-semantic-container {
-      padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+      padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
 
       // Centered viewport
       @if $enable-viewport {
@@ -64,7 +64,7 @@ body {
 
     // Semantic container
     @else {
-      padding: var(--block-spacing-vertical) 0;
+      padding: var(--pico-block-spacing-vertical) 0;
     }
   }
 }

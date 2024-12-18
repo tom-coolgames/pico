@@ -15,7 +15,7 @@
   margin-left: 0;
   margin-inline-start: 0;
   margin-inline-end: 0.375em;
-  border-width: var(--border-width);
+  border-width: var(--pico-border-width);
   font-size: inherit;
   vertical-align: middle;
   cursor: pointer;
@@ -27,9 +27,9 @@
   &:checked,
   &:checked:active,
   &:checked:focus {
-    --background-color: var(--primary);
-    --border-color: var(--primary);
-    background-image: var(--icon-checkbox);
+    --pico-background-color: var(--pico-primary);
+    --pico-border-color: var(--pico-primary);
+    background-image: var(--pico-icon-checkbox);
     background-position: center;
     background-size: 0.75em auto;
     background-repeat: no-repeat;
@@ -46,9 +46,9 @@
 // Checkboxes
 #{$parent-selector} [type="checkbox"] {
   &:indeterminate {
-    --background-color: var(--primary);
-    --border-color: var(--primary);
-    background-image: var(--icon-minus);
+    --pico-background-color: var(--pico-primary);
+    --pico-border-color: var(--pico-primary);
+    background-image: var(--pico-icon-minus);
     background-position: center;
     background-size: 0.75em auto;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@
   &:checked,
   &:checked:active,
   &:checked:focus {
-    --background-color: var(--primary-inverse);
+    --pico-background-color: var(--pico-primary-inverse);
     border-width: 0.35em;
     background-image: none;
   }
@@ -70,9 +70,9 @@
 
 // Switchs
 #{$parent-selector} [type="checkbox"][role="switch"] {
-  --background-color: var(--switch-background-color);
-  --border-color: var(--switch-background-color);
-  --color: var(--switch-color);
+  --pico-background-color: var(--pico-switch-background-color);
+  --pico-border-color: var(--pico-switch-background-color);
+  --pico-color: var(--pico-switch-color);
 
   // Config
   $switch-height: 1.25em;
@@ -82,27 +82,27 @@
   // Styles
   width: $switch-width;
   height: $switch-height;
-  border: var(--border-width) solid var(--border-color);
+  border: var(--pico-border-width) solid var(--pico-border-color);
   border-radius: $switch-height;
-  background-color: var(--background-color);
+  background-color: var(--pico-background-color);
   line-height: $switch-height;
 
   &:focus {
-    --background-color: var(--switch-background-color);
-    --border-color: var(--switch-background-color);
+    --pico-background-color: var(--pico-switch-background-color);
+    --pico-border-color: var(--pico-switch-background-color);
   }
 
   &:checked {
-    --background-color: var(--switch-checked-background-color);
-    --border-color: var(--switch-checked-background-color);
+    --pico-background-color: var(--pico-switch-checked-background-color);
+    --pico-border-color: var(--pico-switch-checked-background-color);
   }
 
   &:before {
     display: block;
-    width: calc(#{$switch-height} - (var(--border-width) * 2));
+    width: calc(#{$switch-height} - (var(--pico-border-width) * 2));
     height: 100%;
     border-radius: 50%;
-    background-color: var(--color);
+    background-color: var(--pico-color);
     content: "";
 
     @if $enable-transitions {
@@ -114,8 +114,8 @@
     background-image: none;
 
     &::before {
-      margin-left: calc(#{$switch-width * 0.5} - var(--border-width));
-      margin-inline-start: calc(#{$switch-width * 0.5} - var(--border-width));
+      margin-left: calc(#{$switch-width * 0.5} - var(--pico-border-width));
+      margin-inline-start: calc(#{$switch-width * 0.5} - var(--pico-border-width));
     }
   }
 }
@@ -129,10 +129,10 @@
 #{$parent-selector} [type="checkbox"][role="switch"]:checked {
   
   &[aria-invalid="false"] {
-    --border-color: var(--form-element-valid-border-color);
+    --pico-border-color: var(--pico-form-element-valid-border-color);
   }
 
   &[aria-invalid="true"] {
-    --border-color: var(--form-element-invalid-border-color);
+    --pico-border-color: var(--pico-form-element-invalid-border-color);
   }
 }

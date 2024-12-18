@@ -4,9 +4,9 @@
 
  #{$parent-selector} details {
   display: block;
-  margin-bottom: var(--spacing);
-  padding-bottom: var(--spacing);
-  border-bottom: var(--border-width) solid var(--accordion-border-color);
+  margin-bottom: var(--pico-spacing);
+  padding-bottom: var(--pico-spacing);
+  border-bottom: var(--pico-border-width) solid var(--pico-accordion-border-color);
 
   summary {
     line-height: 1rem;
@@ -14,11 +14,11 @@
     cursor: pointer;
 
     &:not([role]) {
-      color: var(--accordion-close-summary-color);
+      color: var(--pico-accordion-close-summary-color);
     }
 
     @if $enable-transitions {
-      transition: color var(--transition);
+      transition: color var(--pico-transition);
     }
 
     // Reset marker
@@ -39,17 +39,17 @@
       display: block;
       width: 1rem;
       height: 1rem;
-      margin-inline-start: calc(var(--spacing, 1rem) * 0.5);
+      margin-inline-start: calc(var(--pico-spacing, 1rem) * 0.5);
       float: right;
       transform: rotate(-90deg);
-      background-image: var(--icon-chevron);
+      background-image: var(--pico-icon-chevron);
       background-position: right center;
       background-size: 1rem auto;
       background-repeat: no-repeat;
       content: "";
 
       @if $enable-transitions {
-        transition: transform var(--transition);
+        transition: transform var(--pico-transition);
       }
     }
 
@@ -57,7 +57,7 @@
       outline: none;
 
       &:not([role="button"]) {
-        color: var(--accordion-active-summary-color);
+        color: var(--pico-accordion-active-summary-color);
       }
     }
 
@@ -68,8 +68,8 @@
 
       // Marker
       &::after {
-        height: calc(1rem * var(--line-height, 1.5));
-        background-image: var(--icon-chevron-button);
+        height: calc(1rem * var(--pico-line-height, 1.5));
+        background-image: var(--pico-icon-chevron-button);
       }
 
       @if $enable-classes {
@@ -77,7 +77,7 @@
         &:not(.outline).contrast {
           // Marker
           &::after {
-            background-image: var(--icon-chevron-button-inverse);
+            background-image: var(--pico-icon-chevron-button-inverse);
           }
         }
       }
@@ -87,11 +87,11 @@
   // Open
   &[open] {
     > summary {
-      margin-bottom: calc(var(--spacing));
+      margin-bottom: calc(var(--pico-spacing));
 
       &:not([role]) {
         &:not(:focus) {
-          color: var(--accordion-open-summary-color);
+          color: var(--pico-accordion-open-summary-color);
         }
       }
 

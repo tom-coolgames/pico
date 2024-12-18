@@ -3,7 +3,7 @@
  */
 
 body > nav {
-  --nav-link-spacing-vertical: 1rem;
+  --pico-nav-link-spacing-vertical: 1rem;
 
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   z-index: 99;
@@ -12,11 +12,11 @@ body > nav {
   right: 0;
   left: 0;
   backdrop-filter: saturate(180%) blur(20px);
-  background-color: var(--nav-background-color);
-  box-shadow: 0px 1px 0 var(--nav-border-color);
+  background-color: var(--pico-nav-background-color);
+  box-shadow: 0px 1px 0 var(--pico-nav-border-color);
 
   &.container-fluid {
-    padding-right: calc(var(--spacing) + var(--scrollbar-width, 0px));
+    padding-right: calc(var(--pico-spacing) + var(--pico-scrollbar-width, 0px));
   }
 
   a {
@@ -29,7 +29,7 @@ body > nav {
 
   // Band & Title
   ul:first-of-type {
-    margin-left: calc(var(--spacing) * -1);
+    margin-left: calc(var(--pico-spacing) * -1);
 
     li {
       padding: 0;
@@ -40,8 +40,8 @@ body > nav {
           display: block;
           margin: 0;
           padding: 0;
-          background: var(--h1-color);
-          color: var(--nav-logo-color);
+          background: var(--pico-h1-color);
+          color: var(--pico-nav-logo-color);
   
           svg {
             display: block;
@@ -54,8 +54,8 @@ body > nav {
       // Title
       &:nth-of-type(2) {
         display: none;
-        margin-left: calc(var(--spacing) * 1.5);
-        color: var(--h1-color);
+        margin-left: calc(var(--pico-spacing) * 1.5);
+        color: var(--pico-h1-color);
   
         @media (min-width: map-get($breakpoints, "lg")) {
           display: inline;

@@ -22,11 +22,11 @@
 // Cells
 #{$parent-selector} th,
 #{$parent-selector} td {
-  padding: calc(var(--spacing) / 2) var(--spacing);
-  border-bottom: var(--border-width) solid var(--table-border-color);
-  color: var(--color);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
+  padding: calc(var(--pico-spacing) / 2) var(--pico-spacing);
+  border-bottom: var(--pico-border-width) solid var(--pico-table-border-color);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
   text-align: left;
   text-align: start;
 }
@@ -35,7 +35,7 @@
 #{$parent-selector} tfoot {
   th,
   td {
-    border-top: var(--border-width) solid var(--table-border-color);
+    border-top: var(--pico-border-width) solid var(--pico-table-border-color);
     border-bottom: 0;
   }
 }
@@ -44,7 +44,7 @@
 #{$parent-selector} table {
   &[role="grid"] {
     tbody tr:nth-child(odd) {
-      background-color: var(--table-row-stripped-background-color);
+      background-color: var(--pico-table-row-stripped-background-color);
     }
   }
 }

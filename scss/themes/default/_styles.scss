@@ -1,75 +1,75 @@
 // Commons Styles
 :root {
   // Typography
-  --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+  --pico-font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  --line-height: 1.5;
-  --font-weight: 400;
-  --font-size: 16px;
+  --pico-line-height: 1.5;
+  --pico-font-weight: 400;
+  --pico-font-size: 16px;
 
   // Responsive typography
   @if $enable-responsive-typography {
     @if map-get($breakpoints, "sm") {
       @media (min-width: map-get($breakpoints, "sm")) {
-        --font-size: 17px;
+        --pico-font-size: 17px;
       }
     }
 
     @if map-get($breakpoints, "md") {
       @media (min-width: map-get($breakpoints, "md")) {
-        --font-size: 18px;
+        --pico-font-size: 18px;
       }
     }
 
     @if map-get($breakpoints, "lg") {
       @media (min-width: map-get($breakpoints, "lg")) {
-        --font-size: 19px;
+        --pico-font-size: 19px;
       }
     }
 
     @if map-get($breakpoints, "xl") {
       @media (min-width: map-get($breakpoints, "xl")) {
-        --font-size: 20px;
+        --pico-font-size: 20px;
       }
     }
   }
 
   // Borders
-  --border-radius: 0.25rem;
-  --border-width: 1px;
-  --outline-width: 3px;
+  --pico-border-radius: 0.25rem;
+  --pico-border-width: 1px;
+  --pico-outline-width: 3px;
 
   // Spacings
-  --spacing: 1rem;
+  --pico-spacing: 1rem;
 
   // Spacings for typography elements
-  --typography-spacing-vertical: 1.5rem;
+  --pico-typography-spacing-vertical: 1.5rem;
 
   // Spacings for body > header, body > main, body > footer, section, article
-  --block-spacing-vertical: calc(var(--spacing) * 2);
-  --block-spacing-horizontal: var(--spacing);
+  --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2);
+  --pico-block-spacing-horizontal: var(--pico-spacing);
 
   @if ($enable-classes and $enable-grid) {
-    --grid-spacing-vertical: 0;
-    --grid-spacing-horizontal: var(--spacing);
+    --pico-grid-spacing-vertical: 0;
+    --pico-grid-spacing-horizontal: var(--pico-spacing);
   }
 
   // Spacings for form elements and button
-  --form-element-spacing-vertical: 0.75rem;
-  --form-element-spacing-horizontal: 1rem;
+  --pico-form-element-spacing-vertical: 0.75rem;
+  --pico-form-element-spacing-horizontal: 1rem;
 
   // Spacings for nav component
-  --nav-element-spacing-vertical: 1rem;
-  --nav-element-spacing-horizontal: 0.5rem;
-  --nav-link-spacing-vertical: 0.5rem;
-  --nav-link-spacing-horizontal: 0.5rem;
+  --pico-nav-element-spacing-vertical: 1rem;
+  --pico-nav-element-spacing-horizontal: 0.5rem;
+  --pico-nav-link-spacing-vertical: 0.5rem;
+  --pico-nav-link-spacing-horizontal: 0.5rem;
 
   // Font weight for form labels & fieldsets legend
-  --form-label-font-weight: var(--font-weight);
+  --pico-form-label-font-weight: var(--pico-font-weight);
 
   // Transitions
-  --transition: 0.2s ease-in-out;
+  --pico-transition: 0.2s ease-in-out;
 }
 
 // Responsives spacings
@@ -81,25 +81,25 @@
   section {
     @if map-get($breakpoints, "sm") {
       @media (min-width: map-get($breakpoints, "sm")) {
-        --block-spacing-vertical: calc(var(--spacing) * 2.5);
+        --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2.5);
       }
     }
 
     @if map-get($breakpoints, "md") {
       @media (min-width: map-get($breakpoints, "md")) {
-        --block-spacing-vertical: calc(var(--spacing) * 3);
+        --pico-block-spacing-vertical: calc(var(--pico-spacing) * 3);
       }
     }
 
     @if map-get($breakpoints, "lg") {
       @media (min-width: map-get($breakpoints, "lg")) {
-        --block-spacing-vertical: calc(var(--spacing) * 3.5);
+        --pico-block-spacing-vertical: calc(var(--pico-spacing) * 3.5);
       }
     }
 
     @if map-get($breakpoints, "xl") {
       @media (min-width: map-get($breakpoints, "xl")) {
-        --block-spacing-vertical: calc(var(--spacing) * 4);
+        --pico-block-spacing-vertical: calc(var(--pico-spacing) * 4);
       }
     }
   }
@@ -108,25 +108,25 @@
   article {
     @if map-get($breakpoints, "sm") {
       @media (min-width: map-get($breakpoints, "sm")) {
-        --block-spacing-horizontal: calc(var(--spacing) * 1.25);
+        --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.25);
       }
     }
 
     @if map-get($breakpoints, "md") {
       @media (min-width: map-get($breakpoints, "md")) {
-        --block-spacing-horizontal: calc(var(--spacing) * 1.5);
+        --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.5);
       }
     }
 
     @if map-get($breakpoints, "lg") {
       @media (min-width: map-get($breakpoints, "lg")) {
-        --block-spacing-horizontal: calc(var(--spacing) * 1.75);
+        --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.75);
       }
     }
 
     @if map-get($breakpoints, "xl") {
       @media (min-width: map-get($breakpoints, "xl")) {
-        --block-spacing-horizontal: calc(var(--spacing) * 2);
+        --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 2);
       }
     }
   }
@@ -134,20 +134,20 @@
   // Modal
   dialog > article {
 
-    --block-spacing-vertical: calc(var(--spacing) * 2);
-    --block-spacing-horizontal: var(--spacing);
+    --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2);
+    --pico-block-spacing-horizontal: var(--pico-spacing);
 
     @if map-get($breakpoints, "sm") {
       @media (min-width: map-get($breakpoints, "sm")) {
-        --block-spacing-vertical: calc(var(--spacing) * 2.5);
-        --block-spacing-horizontal: calc(var(--spacing) * 1.25);
+        --pico-block-spacing-vertical: calc(var(--pico-spacing) * 2.5);
+        --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.25);
       }
     }
 
     @if map-get($breakpoints, "md") {
       @media (min-width: map-get($breakpoints, "md")) {
-        --block-spacing-vertical: calc(var(--spacing) * 3);
-        --block-spacing-horizontal: calc(var(--spacing) * 1.5);
+        --pico-block-spacing-vertical: calc(var(--pico-spacing) * 3);
+        --pico-block-spacing-horizontal: calc(var(--pico-spacing) * 1.5);
       }
     }
   }
@@ -155,20 +155,20 @@
 
 // Link
 a {
-  --text-decoration: none;
+  --pico-text-decoration: none;
 
   // Secondary & Contrast
   @if $enable-classes {
     &.secondary,
     &.contrast {
-      --text-decoration: underline;
+      --pico-text-decoration: underline;
     }
   }
 }
 
 // Small
 small {
-  --font-size: 0.875em;
+  --pico-font-size: 0.875em;
 }
 
 // Headings
@@ -178,42 +178,42 @@ h3,
 h4,
 h5,
 h6 {
-  --font-weight: 700;
+  --pico-font-weight: 700;
 }
 
 h1 {
-  --font-size: 2rem;
-  --typography-spacing-vertical: 3rem;
+  --pico-font-size: 2rem;
+  --pico-typography-spacing-vertical: 3rem;
 }
 
 h2 {
-  --font-size: 1.75rem;
-  --typography-spacing-vertical: 2.625rem;
+  --pico-font-size: 1.75rem;
+  --pico-typography-spacing-vertical: 2.625rem;
 }
 
 h3 {
-  --font-size: 1.5rem;
-  --typography-spacing-vertical: 2.25rem;
+  --pico-font-size: 1.5rem;
+  --pico-typography-spacing-vertical: 2.25rem;
 }
 
 h4 {
-  --font-size: 1.25rem;
-  --typography-spacing-vertical: 1.874rem;
+  --pico-font-size: 1.25rem;
+  --pico-typography-spacing-vertical: 1.874rem;
 }
 
 h5 {
-  --font-size: 1.125rem;
-  --typography-spacing-vertical: 1.6875rem;
+  --pico-font-size: 1.125rem;
+  --pico-typography-spacing-vertical: 1.6875rem;
 }
 
 // Forms elements
 [type="checkbox"],
 [type="radio"] {
-  --border-width: 2px;
+  --pico-border-width: 2px;
 }
 
 [type="checkbox"][role="switch"] {
-  --border-width: 3px;
+  --pico-border-width: 3px;
 }
 
 // Table
@@ -221,12 +221,12 @@ thead,
 tfoot {
   th,
   td {
-    --border-width: 3px;
+    --pico-border-width: 3px;
   }
 }
 
 :not(thead):not(tfoot) > * > td {
-  --font-size: 0.875em;
+  --pico-font-size: 0.875em;
 }
 
 // Code
@@ -234,11 +234,11 @@ pre,
 code,
 kbd,
 samp {
-  --font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
+  --pico-font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
     "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 kbd {
-  --font-weight: bolder;
+  --pico-font-weight: bolder;
 }

@@ -21,12 +21,12 @@
     padding: .25rem .5rem;
     overflow: hidden;
     transform: translate(-50%, -.25rem);
-    border-radius: var(--border-radius);
-    background: var(--tooltip-background-color);
+    border-radius: var(--pico-border-radius);
+    background: var(--pico-tooltip-background-color);
     content: attr(data-tooltip);
-    color: var(--tooltip-color);
+    color: var(--pico-tooltip-color);
     font-style: normal;
-    font-weight: var(--font-weight);
+    font-weight: var(--pico-font-weight);
     font-size: .875rem;
     text-decoration: none;
     text-overflow: ellipsis;
@@ -45,7 +45,7 @@
     border-radius: 0;
     background-color: transparent;
     content: "";
-    color: var(--tooltip-background-color);
+    color: var(--pico-tooltip-background-color);
   }
 
   // Display

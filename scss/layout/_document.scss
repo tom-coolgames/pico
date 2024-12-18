@@ -36,12 +36,12 @@
   -webkit-text-size-adjust: 100%; // 6
   text-size-adjust: 100%; // 6
   text-rendering: optimizeLegibility;
-  background-color: var(--background-color);
-  color: var(--color);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  line-height: var(--line-height); // 2
-  font-family: var(--font-family);
+  background-color: var(--pico-background-color);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height); // 2
+  font-family: var(--pico-font-family);
   overflow-wrap: break-word; // 3
   cursor: default; // 1
   tab-size: 4; // 4

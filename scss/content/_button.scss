@@ -31,7 +31,7 @@
 #{$parent-selector} button {
   display: block;
   width: 100%;
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--pico-spacing);
 }
 
 #{$parent-selector} [role="button"] {
@@ -44,40 +44,40 @@
 #{$parent-selector} input[type="button"],
 #{$parent-selector} input[type="reset"],
 #{$parent-selector} [role="button"] {
-  --background-color: var(--primary);
-  --border-color: var(--primary);
-  --color: var(--primary-inverse);
-  --box-shadow: var(--button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-  padding: var(--form-element-spacing-vertical)
-    var(--form-element-spacing-horizontal);
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
+  --pico-background-color: var(--pico-primary);
+  --pico-border-color: var(--pico-primary);
+  --pico-color: var(--pico-primary-inverse);
+  --pico-box-shadow: var(--pico-button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+  padding: var(--pico-form-element-spacing-vertical)
+    var(--pico-form-element-spacing-horizontal);
+  border: var(--pico-border-width) solid var(--pico-border-color);
+  border-radius: var(--pico-border-radius);
   outline: none;
-  background-color: var(--background-color);
-  box-shadow: var(--box-shadow);
-  color: var(--color);
-  font-weight: var(--font-weight);
+  background-color: var(--pico-background-color);
+  box-shadow: var(--pico-box-shadow);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
   font-size: 1rem;
-  line-height: var(--line-height);
+  line-height: var(--pico-line-height);
   text-align: center;
   cursor: pointer;
 
   @if $enable-transitions {
-    transition: background-color var(--transition),
-      border-color var(--transition), color var(--transition),
-      box-shadow var(--transition);
+    transition: background-color var(--pico-transition),
+      border-color var(--pico-transition), color var(--pico-transition),
+      box-shadow var(--pico-transition);
   }
 
   &:is([aria-current], :hover, :active, :focus) {
-    --background-color: var(--primary-hover);
-    --border-color: var(--primary-hover);
-    --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-    --color: var(--primary-inverse);
+    --pico-background-color: var(--pico-primary-hover);
+    --pico-border-color: var(--pico-primary-hover);
+    --pico-box-shadow: var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+    --pico-color: var(--pico-primary-inverse);
   }
 
   &:focus {
-    --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-      0 0 0 var(--outline-width) var(--primary-focus);
+    --pico-box-shadow: var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+      0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
   }
 }
 
@@ -87,88 +87,88 @@
   // Secondary
   :is(button, input[type="submit"], input[type="button"], [role="button"]).secondary,
   input[type="reset"] {
-    --background-color: var(--secondary);
-    --border-color: var(--secondary);
-    --color: var(--secondary-inverse);
+    --pico-background-color: var(--pico-secondary);
+    --pico-border-color: var(--pico-secondary);
+    --pico-color: var(--pico-secondary-inverse);
     cursor: pointer;
 
     &:is([aria-current], :hover, :active, :focus) {
-      --background-color: var(--secondary-hover);
-      --border-color: var(--secondary-hover);
-      --color: var(--secondary-inverse);
+      --pico-background-color: var(--pico-secondary-hover);
+      --pico-border-color: var(--pico-secondary-hover);
+      --pico-color: var(--pico-secondary-inverse);
     }
 
     &:focus {
-      --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-        0 0 0 var(--outline-width) var(--secondary-focus);
+      --pico-box-shadow: var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+        0 0 0 var(--pico-outline-width) var(--pico-secondary-focus);
     }
   }
 
   // Contrast
   :is(button, input[type="submit"], input[type="button"], [role="button"]).contrast {
-    --background-color: var(--contrast);
-    --border-color: var(--contrast);
-    --color: var(--contrast-inverse);
+    --pico-background-color: var(--pico-contrast);
+    --pico-border-color: var(--pico-contrast);
+    --pico-color: var(--pico-contrast-inverse);
 
     &:is([aria-current], :hover, :active, :focus) {
-      --background-color: var(--contrast-hover);
-      --border-color: var(--contrast-hover);
-      --color: var(--contrast-inverse);
+      --pico-background-color: var(--pico-contrast-hover);
+      --pico-border-color: var(--pico-contrast-hover);
+      --pico-color: var(--pico-contrast-inverse);
     }
 
     &:focus {
-      --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-        0 0 0 var(--outline-width) var(--contrast-focus);
+      --pico-box-shadow: var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+        0 0 0 var(--pico-outline-width) var(--pico-contrast-focus);
     }
   }
 
   // Outline (primary)
   :is(button, input[type="submit"], input[type="button"], [role="button"]).outline,
   input[type="reset"].outline {
-    --background-color: transparent;
-    --color: var(--primary);
+    --pico-background-color: transparent;
+    --pico-color: var(--pico-primary);
 
     &:is([aria-current], :hover, :active, :focus) {
-      --background-color: transparent;
-      --color: var(--primary-hover);
+      --pico-background-color: transparent;
+      --pico-color: var(--pico-primary-hover);
     }
   }
 
   // Outline (secondary)
   :is(button, input[type="submit"], input[type="button"], [role="button"]).outline.secondary,
   input[type="reset"].outline {
-    --color: var(--secondary);
+    --pico-color: var(--pico-secondary);
 
     &:is([aria-current], :hover, :active, :focus) {
-      --color: var(--secondary-hover);
+      --pico-color: var(--pico-secondary-hover);
     }
   }
 
   // Outline (contrast)
   :is(button, input[type="submit"], input[type="button"], [role="button"]).outline.contrast {
-    --color: var(--contrast);
+    --pico-color: var(--pico-contrast);
 
     &:is([aria-current], :hover, :active, :focus) {
-      --color: var(--contrast-hover);
+      --pico-color: var(--pico-contrast-hover);
     }
   }
 } 
 @else {
   // Secondary button without .class
   input[type="reset"] {
-    --background-color: var(--secondary);
-    --border-color: var(--secondary);
-    --color: var(--secondary-inverse);
+    --pico-background-color: var(--pico-secondary);
+    --pico-border-color: var(--pico-secondary);
+    --pico-color: var(--pico-secondary-inverse);
     cursor: pointer;
 
     &:is([aria-current], :hover, :active, :focus) {
-      --background-color: var(--secondary-hover);
-      --border-color: var(--secondary-hover);
+      --pico-background-color: var(--pico-secondary-hover);
+      --pico-border-color: var(--pico-secondary-hover);
     }
 
     &:focus {
-      --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-        0 0 0 var(--outline-width) var(--secondary-focus);
+      --pico-box-shadow: var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+        0 0 0 var(--pico-outline-width) var(--pico-secondary-focus);
     }
   }
 }

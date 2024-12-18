@@ -42,62 +42,62 @@
 #{$parent-selector} table,
 #{$parent-selector} ul {
   margin-top: 0;
-  margin-bottom: var(--typography-spacing-vertical);
-  color: var(--color);
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
   font-style: normal;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
 }
 
 // Links
 // 1. Remove the gray background on active links in IE 10
 #{$parent-selector} a,
 #{$parent-selector} [role="link"] {
-  --color: var(--primary);
-  --background-color: transparent;
+  --pico-color: var(--pico-primary);
+  --pico-background-color: transparent;
   outline: none;
-  background-color: var(--background-color); // 1
-  color: var(--color);
-  text-decoration: var(--text-decoration);
+  background-color: var(--pico-background-color); // 1
+  color: var(--pico-color);
+  text-decoration: var(--pico-text-decoration);
 
   @if $enable-transitions {
-    transition: background-color var(--transition), color var(--transition),
-      text-decoration var(--transition), box-shadow var(--transition);
+    transition: background-color var(--pico-transition), color var(--pico-transition),
+      text-decoration var(--pico-transition), box-shadow var(--pico-transition);
   }
 
   &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--primary-hover);
-    --text-decoration: underline;
+    --pico-color: var(--pico-primary-hover);
+    --pico-text-decoration: underline;
   }
 
   &:focus {
-    --background-color: var(--primary-focus);
+    --pico-background-color: var(--pico-primary-focus);
   }
 
   @if $enable-classes {
     // Secondary
     &.secondary {
-      --color: var(--secondary);
+      --pico-color: var(--pico-secondary);
 
       &:is([aria-current], :hover, :active, :focus) {
-        --color: var(--secondary-hover);
+        --pico-color: var(--pico-secondary-hover);
       }
 
       &:focus {
-        --background-color: var(--secondary-focus);
+        --pico-background-color: var(--pico-secondary-focus);
       }
     }
 
     // Contrast
     &.contrast {
-      --color: var(--contrast);
+      --pico-color: var(--pico-contrast);
 
       &:is([aria-current], :hover, :active, :focus) {
-        --color: var(--contrast-hover);
+        --pico-color: var(--pico-contrast-hover);
       }
 
       &:focus {
-        --background-color: var(--contrast-focus);
+        --pico-background-color: var(--pico-contrast-focus);
       }
     }
   }
@@ -111,51 +111,51 @@
 #{$parent-selector} h5,
 #{$parent-selector} h6 {
   margin-top: 0;
-  margin-bottom: var(--typography-spacing-vertical);
-  color: var(--color);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  font-family: var(--font-family);
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  font-family: var(--pico-font-family);
 }
 
 #{$parent-selector} h1 {
-  --color: var(--h1-color);
+  --pico-color: var(--pico-h1-color);
 }
 #{$parent-selector} h2 {
-  --color: var(--h2-color);
+  --pico-color: var(--pico-h2-color);
 }
 #{$parent-selector} h3 {
-  --color: var(--h3-color);
+  --pico-color: var(--pico-h3-color);
 }
 #{$parent-selector} h4 {
-  --color: var(--h4-color);
+  --pico-color: var(--pico-h4-color);
 }
 #{$parent-selector} h5 {
-  --color: var(--h5-color);
+  --pico-color: var(--pico-h5-color);
 }
 #{$parent-selector} h6 {
-  --color: var(--h6-color);
+  --pico-color: var(--pico-h6-color);
 }
 
 // Margin-top for headings after a typography block
 #{$parent-selector} :where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
   ~ :is(h1, h2, h3, h4, h5, h6) {
-    margin-top: var(--typography-spacing-vertical);
+    margin-top: var(--pico-typography-spacing-vertical);
   }
 }
 
 // Heading group
 @if $enable-classes == false {
   #{$parent-selector} hgroup {
-    margin-bottom: var(--typography-spacing-vertical);
+    margin-bottom: var(--pico-typography-spacing-vertical);
 
     > * {
       margin-bottom: 0;
     }
 
     > *:last-child {
-      --color: var(--muted-color);
-      --font-weight: unset;
+      --pico-color: var(--pico-muted-color);
+      --pico-font-weight: unset;
       font-size: 1rem;
       font-family: unset;
     }
@@ -165,15 +165,15 @@
 @if $enable-classes {
   #{$parent-selector} hgroup,
   #{$parent-selector} .headings {
-    margin-bottom: var(--typography-spacing-vertical);
+    margin-bottom: var(--pico-typography-spacing-vertical);
 
     > * {
       margin-bottom: 0;
     }
 
     > *:last-child {
-      --color: var(--muted-color);
-      --font-weight: unset;
+      --pico-color: var(--pico-muted-color);
+      --pico-font-weight: unset;
       font-size: 1rem;
       font-family: unset;
     }
@@ -182,23 +182,23 @@
 
 // Paragraphs
 #{$parent-selector} p {
-  margin-bottom: var(--typography-spacing-vertical);
+  margin-bottom: var(--pico-typography-spacing-vertical);
 }
 
 // Small
 #{$parent-selector} small {
-  font-size: var(--font-size);
+  font-size: var(--pico-font-size);
 }
 
 // Lists
 #{$parent-selector} :where(dl, ol, ul) {
   padding-right: 0;
-  padding-left: var(--spacing);
-  padding-inline-start: var(--spacing);
+  padding-left: var(--pico-spacing);
+  padding-inline-start: var(--pico-spacing);
   padding-inline-end: 0;
 
   li {
-    margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+    margin-bottom: calc(var(--pico-typography-spacing-vertical) * 0.25);
   }
 }
 
@@ -207,7 +207,7 @@
 #{$parent-selector} :where(dl, ol, ul) {
   :is(dl, ol, ul) {
     margin: 0; // 1
-    margin-top: calc(var(--typography-spacing-vertical) * 0.25);
+    margin-top: calc(var(--pico-typography-spacing-vertical) * 0.25);
   }
 }
 
@@ -218,24 +218,24 @@
 // Highlighted text
 #{$parent-selector} mark {
   padding: 0.125rem 0.25rem;
-  background-color: var(--mark-background-color);
-  color: var(--mark-color);
+  background-color: var(--pico-mark-background-color);
+  color: var(--pico-mark-color);
   vertical-align: baseline;
 }
 
 // Blockquote
 #{$parent-selector} blockquote {
   display: block;
-  margin: var(--typography-spacing-vertical) 0;
-  padding: var(--spacing);
+  margin: var(--pico-typography-spacing-vertical) 0;
+  padding: var(--pico-spacing);
   border-right: none;
-  border-left: 0.25rem solid var(--blockquote-border-color);
-  border-inline-start: 0.25rem solid var(--blockquote-border-color);
+  border-left: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
   border-inline-end: none;
 
   footer {
-    margin-top: calc(var(--typography-spacing-vertical) * 0.5);
-    color: var(--blockquote-footer-color);
+    margin-top: calc(var(--pico-typography-spacing-vertical) * 0.5);
+    color: var(--pico-blockquote-footer-color);
   }
 }
 
@@ -249,16 +249,16 @@
 
 // Ins
 #{$parent-selector} ins {
-  color: var(--ins-color);
+  color: var(--pico-ins-color);
   text-decoration: none;
 }
 
 // del
 #{$parent-selector} del {
-  color: var(--del-color);
+  color: var(--pico-del-color);
 }
 
 // selection
 #{$parent-selector} ::selection {
-  background-color: var(--primary-focus);
+  background-color: var(--pico-primary-focus);
 }
